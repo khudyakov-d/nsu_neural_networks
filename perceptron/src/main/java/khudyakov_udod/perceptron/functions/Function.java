@@ -1,4 +1,4 @@
-package khudyakov_udod.perceptron.new_functions;
+package khudyakov_udod.perceptron.functions;
 
 public abstract class Function {
     private boolean simplifyAvailable;

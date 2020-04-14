@@ -1,9 +1,11 @@
 package khudyakov_udod.perceptron.network;
 
-import khudyakov_udod.perceptron.network.entities.ActiveLayer;
-import khudyakov_udod.perceptron.network.entities.Layer;
-import khudyakov_udod.perceptron.network.entities.Neuron;
-import khudyakov_udod.perceptron.new_functions.Function;
+import khudyakov_udod.perceptron.network.entities.layers.ActiveLayer;
+import khudyakov_udod.perceptron.network.entities.layers.Layer;
+import khudyakov_udod.perceptron.network.entities.neurons.ActiveNeuron;
+import khudyakov_udod.perceptron.network.entities.neurons.InputNeuron;
+import khudyakov_udod.perceptron.network.entities.neurons.Neuron;
+import khudyakov_udod.perceptron.functions.Function;
 
 import java.util.*;
 
@@ -22,11 +24,11 @@ public class NetBuilder {
     }
 
     private Layer createInputLayer() {
-        List<Neuron> inputNeurons = new ArrayList<>();
+        List<Neuron> inputHNeurons = new ArrayList<>();
         for (int i = 0; i < inputNeuronsCounts; i++) {
-            inputNeurons.add(new Neuron(idGenerator++));
+            inputHNeurons.add(new InputNeuron(idGenerator++));
         }
-        return new Layer(inputNeurons);
+        return new Layer(inputHNeurons);
     }
 
     private Neuron createNeuronWithConnections(Layer layer) {
@@ -34,12 +36,12 @@ public class NetBuilder {
         for (Neuron neuron : layer.getNeurons()) {
             connectionWeights.put(neuron, 0f);
         }
-        return new Neuron(idGenerator++, connectionWeights);
+        return new ActiveNeuron(idGenerator++, connectionWeights);
     }
 
-    private List<ActiveLayer> createHiddenLayers(Layer inputLayer, List<Integer> hiddenLayerSizes, List<Function> functions) {
+    private List<Layer> createHiddenLayers(Layer inputLayer, List<Integer> hiddenLayerSizes, List<Function> functions) {
 
-        List<ActiveLayer> hiddenLayers = new ArrayList<>();
+        List<Layer> hiddenLayers = new ArrayList<>();
 
         if (hiddenLayerSizes.size() != hiddenLayersCount || functions.size() != hiddenLayersCount) {
             throw new IllegalStateException("incorrect initialization of layer sizes");
@@ -59,12 +61,12 @@ public class NetBuilder {
         return hiddenLayers;
     }
 
-    private ActiveLayer createOutputLayer(ActiveLayer lastHiddenActiveLayer, Function outputFunction) {
-        List<Neuron> outputNeurons = new ArrayList<>();
+    private ActiveLayer createOutputLayer(Layer lastHiddenActiveLayer, Function outputFunction) {
+        List<Neuron> outputHNeurons = new ArrayList<>();
         for (int i = 0; i < outputNeuronsCounts; i++) {
-            outputNeurons.add(createNeuronWithConnections(lastHiddenActiveLayer));
+            outputHNeurons.add(createNeuronWithConnections(lastHiddenActiveLayer));
         }
-        return new ActiveLayer(outputNeurons, outputFunction, null);
+        return new ActiveLayer(outputHNeurons, outputFunction, null);
     }
 
     public Net createNet(List<Integer> hiddenLayerSizes, List<Function> functions, float rate) {
@@ -73,8 +75,8 @@ public class NetBuilder {
         } else {
 
             Layer inputLayer = createInputLayer();
-            List<ActiveLayer> hiddenLayers = createHiddenLayers(inputLayer, hiddenLayerSizes, functions.subList(0, hiddenLayersCount));
-            ActiveLayer outputLayer = createOutputLayer(hiddenLayers.get(hiddenLayers.size() - 1), functions.get(functions.size() - 1));
+            List<Layer> hiddenLayers = createHiddenLayers(inputLayer, hiddenLayerSizes, functions.subList(0, hiddenLayersCount));
+            Layer outputLayer = createOutputLayer(hiddenLayers.get(hiddenLayers.size() - 1), functions.get(functions.size() - 1));
 
             return new Net(inputLayer, hiddenLayers, outputLayer, rate);
         }

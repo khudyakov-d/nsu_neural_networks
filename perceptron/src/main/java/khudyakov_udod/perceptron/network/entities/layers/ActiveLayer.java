@@ -1,6 +1,7 @@
-package khudyakov_udod.perceptron.network.entities;
+package khudyakov_udod.perceptron.network.entities.layers;
 
-import khudyakov_udod.perceptron.new_functions.Function;
+import khudyakov_udod.perceptron.network.entities.neurons.Neuron;
+import khudyakov_udod.perceptron.functions.Function;
 
 import java.util.ArrayList;
 import java.util.List;

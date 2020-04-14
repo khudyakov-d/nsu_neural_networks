@@ -1,7 +1,7 @@
-package khudyakov_udod.perceptron.new_functions;
+package khudyakov_udod.perceptron.functions;
 
 public class SigmoidFunction extends Function {
-    private float a;
+    private final float a;
 
     public SigmoidFunction(float a) {
         super(true);

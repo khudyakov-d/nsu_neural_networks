@@ -1,5 +1,8 @@
 package khudyakov_udod.perceptron.mnist_parser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DigitData {
     private final float[] data;
     private final byte label;
@@ -15,6 +18,16 @@ public class DigitData {
 
     public float[] getData() {
         return data;
+    }
+
+    public List<Float> getDataAsList() {
+        List<Float> list = new ArrayList<>(data.length);
+
+        for (float el : data) {
+            list.add(el);
+        }
+
+        return list;
     }
 
     public void setDataValue(int pos, float value) {

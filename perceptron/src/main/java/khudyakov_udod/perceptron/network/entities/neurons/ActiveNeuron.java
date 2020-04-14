@@ -1,38 +1,18 @@
-package khudyakov_udod.perceptron.network.entities;
+package khudyakov_udod.perceptron.network.entities.neurons;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
-public class Neuron {
-    private final int id;
-
+public class ActiveNeuron extends Neuron {
     private float pureOutput;
     private float activatedOutput;
     private float delta;
 
-    private Map<Neuron, Float> connections = new HashMap<>();
+    private Map<Neuron, Float> connections;
 
-    public Neuron(int id) {
-        this.id = id;
-    }
-
-    public Neuron(int id, Map<Neuron, Float> connections) {
-        this.id = id;
+    public ActiveNeuron(int id, Map<Neuron, Float> connections) {
+        super(id);
         this.connections = connections;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Neuron neuron = (Neuron) o;
-        return id == neuron.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     public float getActivatedOutput() {
@@ -63,5 +43,7 @@ public class Neuron {
         return connections;
     }
 
-
+    public void setConnections(Map<Neuron, Float> connections) {
+        this.connections = connections;
+    }
 }
