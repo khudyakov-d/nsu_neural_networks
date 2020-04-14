@@ -187,22 +187,25 @@ public class Net {
         exampleCount += 1;
     }
 
+
+    private void calcLayers(List<Float> inputData) {
+        List<Neuron> neurons = inputLayer.getNeurons();
+        for (int i = 0, neuronsSize = neurons.size(); i < neuronsSize; ++i) {
+            ((InputNeuron) neurons.get(i)).setOutput(inputData.get(i));
+        }
+
+        calcFirstHiddenLayer();
+        calcOtherHiddenLayers();
+        calcOutputLayerOutputs();
+    }
+
     public void trainExample(List<Float> inputData, float[] outputData) {
         if (inputData.size() != inputLayer.getNeurons().size()) {
             throw new IllegalStateException("Incorrect data dimension for input layer");
         } else if (outputData.length != outputLayer.getNeurons().size()) {
             throw new IllegalStateException("Incorrect data dimension for output layer");
         } else {
-
-            List<Neuron> neurons = inputLayer.getNeurons();
-
-            for (int i = 0, neuronsSize = neurons.size(); i < neuronsSize; ++i) {
-                ((InputNeuron) neurons.get(i)).setOutput(inputData.get(i));
-            }
-
-            calcFirstHiddenLayer();
-            calcOtherHiddenLayers();
-            calcOutputLayerOutputs();
+            calcLayers(inputData);
 
             recalculateOutputLayerWeights(outputData);
             recalculateHiddenLayerWeights();
@@ -211,12 +214,21 @@ public class Net {
         }
     }
 
+    public void testExample(List<Float> inputData, float[] outputData) {
+        if (inputData.size() != inputLayer.getNeurons().size()) {
+            throw new IllegalStateException("Incorrect data dimension for input layer");
+        } else if (outputData.length != outputLayer.getNeurons().size()) {
+            throw new IllegalStateException("Incorrect data dimension for output layer");
+        } else {
+            calcLayers(inputData);
+            calcError(outputData);
+        }
+    }
+
     public float getAverageError() {
         float E = avgE / exampleCount;
-
         exampleCount = 0;
         avgE = 0;
-
         return E;
     }
 
@@ -224,7 +236,7 @@ public class Net {
         List<Neuron> neurons = outputLayer.getNeurons();
         System.out.print("neurons output: ");
         for (Neuron neuron : neurons) {
-            System.out.print(((ActiveNeuron) neuron).getActivatedOutput() + " ");
+            System.out.print(String.format("%.5f",((ActiveNeuron) neuron).getActivatedOutput()) + " ");
         }
     }
 }

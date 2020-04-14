@@ -1,5 +1,6 @@
 package khudyakov_udod.perceptron;
 
+import khudyakov_udod.perceptron.functions.EmptyFunction;
 import khudyakov_udod.perceptron.functions.Function;
 import khudyakov_udod.perceptron.functions.SigmoidFunction;
 import khudyakov_udod.perceptron.mnist_parser.DigitData;
@@ -25,38 +26,39 @@ class Main {
         List<Function> functions = new ArrayList<>();
         functions.add(sigmoidFunction);
         functions.add(sigmoidFunction);
-        functions.add(sigmoidFunction);
+        functions.add(new EmptyFunction());
 
         NetBuilder netBuilder = new NetBuilder(28 * 28, 10, 2);
 
-        Net net = netBuilder.createNet(Arrays.asList(64, 32), functions, 0.1f);
+        Net net = netBuilder.createNet(Arrays.asList(64, 32), functions, 0.001f);
 
+        List<DigitData> trainDigitData = digitDataList.subList(0, (digitDataList.size() / 10) * 7);
+        List<DigitData> testDigitData = digitDataList.subList((digitDataList.size() / 10) * 7, digitDataList.size());
 
         int batchSize = 1000;
         int[] indexes;
         int epochCount = 250;
 
         for (int i = 0; i < epochCount; ++i) {
-            indexes = rand.ints(batchSize, 0, digitDataList.size() + 1).toArray();
+            indexes = rand.ints(batchSize, 0, trainDigitData.size()).toArray();
 
             for (int j = 0; j < batchSize; j++) {
-                net.trainExample((digitDataList.get(indexes[i]).getDataAsList()), digitDataList.get(indexes[i]).convertLabelToArray());
-
-                if (j == batchSize - 1) {
-
-                    float[] answer = digitDataList.get(indexes[i]).convertLabelToArray();
-                    System.out.print("right output: ");
-                    for (int k = 0; k < answer.length; k++) {
-                        System.out.print(answer[k] + " ");
-                    }
-                    System.out.println();
-                    net.printOutputs();
-                }
+                net.trainExample(trainDigitData.get(indexes[j]).getDataAsList(), trainDigitData.get(indexes[j]).convertLabelToArray());
             }
 
             float error = net.getAverageError();
-            System.out.println();
             System.out.println("avg error: " + error);
+            if (error < 0.001) {
+                break;
+            }
         }
+
+        for (int i = 0, size = testDigitData.size(); i < size; i++) {
+            net.testExample(testDigitData.get(i).getDataAsList(), testDigitData.get(i).convertLabelToArray());
+        }
+
+        float error = net.getAverageError();
+        System.out.println();
+        System.out.println("avg error: " + error);
     }
 }

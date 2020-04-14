@@ -1,6 +1,5 @@
 package khudyakov_udod.perceptron.network.entities.neurons;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class ActiveNeuron extends Neuron {
