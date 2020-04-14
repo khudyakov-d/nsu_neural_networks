@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Neuron {
     private final int id;
+
     private float pureOutput;
     private float activatedOutput;
     private float delta;

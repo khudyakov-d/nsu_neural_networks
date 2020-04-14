@@ -1,9 +1,9 @@
 package khudyakov_udod.perceptron.network;
 
-import khudyakov_udod.perceptron.functions.FunctionImpl;
 import khudyakov_udod.perceptron.network.entities.ActiveLayer;
 import khudyakov_udod.perceptron.network.entities.Layer;
 import khudyakov_udod.perceptron.network.entities.Neuron;
+import khudyakov_udod.perceptron.new_functions.Function;
 
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public class Net {
         this.rate = rate;
     }
 
-    private void calcNeuronOutputs(FunctionImpl functionImpl, List<Neuron> neurons, List<Float> bias) {
+    private void calcNeuronOutputs(Function functionImpl, List<Neuron> neurons, List<Float> bias) {
         for (int j = 0, neuronsSize = neurons.size(); j < neuronsSize; ++j) {
             Neuron neuron = neurons.get(j);
 
@@ -39,7 +39,7 @@ public class Net {
             output += bias.get(j);
 
             neuron.setPureOutput(output);
-            neuron.setActivatedOutput(functionImpl.getFunction().applyFunc(output, functionImpl.getA()));
+            neuron.setActivatedOutput(functionImpl.applyFunc(output));
         }
     }
 
@@ -63,17 +63,17 @@ public class Net {
         }
     }
 
-    private float calcDerivative(FunctionImpl functionImpl, Neuron neuron) {
+    private float calcDerivative(Function functionImpl, Neuron neuron) {
         if (functionImpl.isSimplifyAvailable()) {
-            return functionImpl.getFunction().applySimplifiedDeriveFunc(neuron.getActivatedOutput(), functionImpl.getA());
+            return functionImpl.applySimplifiedDerivativeFunc(neuron.getActivatedOutput());
         } else {
-            return functionImpl.getFunction().applyDeriveFunc(neuron.getPureOutput(), functionImpl.getA());
+            return functionImpl.applyDerivativeFunc(neuron.getPureOutput());
         }
     }
 
     private void recalculateOutputLayerWeights(float[] outputData) {
         List<Neuron> outputNeurons = outputLayer.getNeurons();
-        FunctionImpl functionImpl = outputLayer.getFunctionImpl();
+        Function functionImpl = outputLayer.getFunctionImpl();
 
         for (int i = 0, neuronsSize = outputNeurons.size(); i < neuronsSize; ++i) {
             Neuron neuron = outputNeurons.get(i);
@@ -86,7 +86,7 @@ public class Net {
         for (int i = hiddenLayers.size() - 1; i >= 0; --i) {
             ActiveLayer hiddenLayer = hiddenLayers.get(i);
             List<Neuron> neurons = hiddenLayer.getNeurons();
-            FunctionImpl functionImpl = hiddenLayer.getFunctionImpl();
+            Function functionImpl = hiddenLayer.getFunctionImpl();
 
             for (Neuron neuron : neurons) {
                 float derivative = calcDerivative(functionImpl, neuron);

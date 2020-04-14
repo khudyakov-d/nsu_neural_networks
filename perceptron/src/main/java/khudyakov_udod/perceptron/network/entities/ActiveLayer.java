@@ -1,15 +1,15 @@
 package khudyakov_udod.perceptron.network.entities;
 
-import khudyakov_udod.perceptron.functions.FunctionImpl;
+import khudyakov_udod.perceptron.new_functions.Function;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ActiveLayer extends Layer {
-    private final FunctionImpl functionImpl;
+    private final Function functionImpl;
     private final List<Float> bias;
 
-    public ActiveLayer(List<Neuron> neurons, FunctionImpl functionImpl, List<Float> bias) {
+    public ActiveLayer(List<Neuron> neurons, Function functionImpl, List<Float> bias) {
         super(neurons);
         this.functionImpl = functionImpl;
 
@@ -23,7 +23,7 @@ public class ActiveLayer extends Layer {
         }
     }
 
-    public FunctionImpl getFunctionImpl() {
+    public Function getFunctionImpl() {
         return functionImpl;
     }
 

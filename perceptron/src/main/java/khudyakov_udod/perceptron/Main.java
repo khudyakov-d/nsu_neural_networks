@@ -1,15 +1,13 @@
 package khudyakov_udod.perceptron;
 
-import khudyakov_udod.perceptron.functions.FunctionImpl;
-import khudyakov_udod.perceptron.functions.FunctionsBuilder;
 import khudyakov_udod.perceptron.mnist_parser.DigitData;
 import khudyakov_udod.perceptron.mnist_parser.MnistParser;
-import khudyakov_udod.perceptron.network.Net;
 import khudyakov_udod.perceptron.network.NetBuilder;
+import khudyakov_udod.perceptron.new_functions.Function;
+import khudyakov_udod.perceptron.new_functions.SigmoidFunction;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -20,16 +18,17 @@ class Main {
         MnistParser mnistParser = new MnistParser("train-images-idx3-ubyte", "train-labels-idx1-ubyte");
         List<DigitData> digitDataList = mnistParser.readDigits();
 
+        Function sigmoidFunction = new SigmoidFunction(1);
 
-        FunctionImpl sigmoidFunction = FunctionsBuilder.buildSigmoidFunction(1);
-
-        List<FunctionImpl> functions = new ArrayList<>();
+        List<Function> functions = new ArrayList<>();
         functions.add(sigmoidFunction);
         functions.add(sigmoidFunction);
         functions.add(sigmoidFunction);
 
         NetBuilder netBuilder = new NetBuilder(28 * 28, 10, 2);
-        Net net = netBuilder.createNet(Arrays.asList(64, 32), functions, 0.1f);
+
+  /*      Net net = netBuilder.createNet(Arrays.asList(64, 32), functions, 0.1f);
+
 
         int batchSize = 1000;
         int[] indexes;
@@ -46,5 +45,6 @@ class Main {
 
             System.out.println(error);
         }
+  */
     }
 }

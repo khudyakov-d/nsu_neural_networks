@@ -1,9 +1,9 @@
 package khudyakov_udod.perceptron.network;
 
-import khudyakov_udod.perceptron.functions.FunctionImpl;
 import khudyakov_udod.perceptron.network.entities.ActiveLayer;
 import khudyakov_udod.perceptron.network.entities.Layer;
 import khudyakov_udod.perceptron.network.entities.Neuron;
+import khudyakov_udod.perceptron.new_functions.Function;
 
 import java.util.*;
 
@@ -37,15 +37,13 @@ public class NetBuilder {
         return new Neuron(idGenerator++, connectionWeights);
     }
 
-
-    private List<ActiveLayer> createHiddenLayers(Layer inputLayer, List<Integer> hiddenLayerSizes, List<FunctionImpl> functions) {
+    private List<ActiveLayer> createHiddenLayers(Layer inputLayer, List<Integer> hiddenLayerSizes, List<Function> functions) {
 
         List<ActiveLayer> hiddenLayers = new ArrayList<>();
 
         if (hiddenLayerSizes.size() != hiddenLayersCount || functions.size() != hiddenLayersCount) {
             throw new IllegalStateException("incorrect initialization of layer sizes");
         } else {
-
             for (int i = 0; i < hiddenLayersCount; i++) {
                 Layer layer = (i == 0) ? inputLayer : hiddenLayers.get(i - 1);
                 List<Neuron> neurons = new ArrayList<>();
@@ -61,7 +59,7 @@ public class NetBuilder {
         return hiddenLayers;
     }
 
-    private ActiveLayer createOutputLayer(ActiveLayer lastHiddenActiveLayer, FunctionImpl outputFunction) {
+    private ActiveLayer createOutputLayer(ActiveLayer lastHiddenActiveLayer, Function outputFunction) {
         List<Neuron> outputNeurons = new ArrayList<>();
         for (int i = 0; i < outputNeuronsCounts; i++) {
             outputNeurons.add(createNeuronWithConnections(lastHiddenActiveLayer));
@@ -69,10 +67,11 @@ public class NetBuilder {
         return new ActiveLayer(outputNeurons, outputFunction, null);
     }
 
-    public Net createNet(List<Integer> hiddenLayerSizes, List<FunctionImpl> functions, float rate) {
+    public Net createNet(List<Integer> hiddenLayerSizes, List<Function> functions, float rate) {
         if (functions.size() != hiddenLayersCount + 1) {
             throw new IllegalStateException("Not correct count of activation functions");
         } else {
+
             Layer inputLayer = createInputLayer();
             List<ActiveLayer> hiddenLayers = createHiddenLayers(inputLayer, hiddenLayerSizes, functions.subList(0, hiddenLayersCount));
             ActiveLayer outputLayer = createOutputLayer(hiddenLayers.get(hiddenLayers.size() - 1), functions.get(functions.size() - 1));
