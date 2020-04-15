@@ -34,7 +34,7 @@ public class NetBuilder {
     private Neuron createNeuronWithConnections(Layer layer) {
         Map<Neuron, Float> connectionWeights = new HashMap<>();
         for (Neuron neuron : layer.getNeurons()) {
-            connectionWeights.put(neuron, rand.nextFloat() - 0.01f);
+            connectionWeights.put(neuron, rand.nextFloat() - 0.5f);
         }
         return new ActiveNeuron(idGenerator++, connectionWeights);
     }

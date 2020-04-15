@@ -4,15 +4,15 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/MnistParser.java" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3cc5d8-40ff-4729-940f-ee3b07bf9d2e" name="Default Changelist" comment="&quot;neurons were reworked&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/EmptyFunction.java" afterDir="false" />
+    <list default="true" id="dc3cc5d8-40ff-4729-940f-ee3b07bf9d2e" name="Default Changelist" comment="&quot;&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/ActiveNeuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/ActiveNeuron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/network/Net.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/network/Net.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/network/NetBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/khudyakov_udod/perceptron/network/NetBuilder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,50 +25,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="765">
+              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#517#548#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/SigmoidFunction.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/Function.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/EmptyFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="142">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
-                <element signature="e#145#146#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#3176#3177#0" expanded="true" />
+                <element signature="e#3210#3211#0" expanded="true" />
+                <element signature="e#3259#3260#0" expanded="true" />
+                <element signature="e#3291#3292#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/WellMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#523#554#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/well_data.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///opt/jdk1.8.0_201/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="698" column="74" selection-start-line="694" selection-start-column="7" selection-end-line="698" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -76,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-509">
-              <caret line="92" column="92" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="92" />
+            <state relative-caret-position="295">
+              <caret line="227" column="17" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,45 +98,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/Neuron.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/DigitData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/InputNeuron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-              <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/ActiveNeuron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/layers/Layer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="138">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,10 +110,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/MnistParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-72">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,6 +166,7 @@
       <find>pureOut</find>
       <find>correctWeights</find>
       <find>delta</find>
+      <find>recordNumber</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,10 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/DigitMatrix.java" />
-        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/DigitRepresentation.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/DigitData.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistParser/MnistParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/AcrivationFunction.java" />
@@ -213,18 +215,25 @@
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/InputNeuron.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/DigitData.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/ActiveNeuron.java" />
-        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/EmptyFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/GasData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/GasParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/WellMain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="57" />
     <option name="y" value="25" />
-    <option name="width" value="772" />
-    <option name="height" value="875" />
+    <option name="width" value="752" />
+    <option name="height" value="654" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -281,48 +290,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="perceptron" type="462c0819:PsiDirectoryNode" />
+              <item name="gas_parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perceptron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
               <item name="mnist_parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perceptron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perceptron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perceptron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="layers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perceptron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="neurons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,9 +312,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586869633457" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586947044145" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Projects/network_labs/ratio_calculator" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -345,6 +322,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -358,13 +340,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="khudyakov_udod.perceptron.Main" />
+  <component name="RunManager" selected="Application.WellMain">
+    <configuration name="MnistMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="khudyakov_udod.perceptron.MnistMain" />
       <module name="perceptron" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="khudyakov_udod.perceptron.mnist_parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WellMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="khudyakov_udod.perceptron.WellMain" />
+      <module name="perceptron" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="khudyakov_udod.perceptron.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -421,7 +416,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.WellMain" />
+        <item itemvalue="Application.MnistMain" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +433,7 @@
       <updated>1585754186995</updated>
       <workItem from="1585754193023" duration="83112000" />
       <workItem from="1586151107308" duration="18219000" />
-      <workItem from="1586842532801" duration="23470000" />
+      <workItem from="1586842532801" duration="40230000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;functions were reworked&quot;">
       <created>1586844732364</created>
@@ -453,11 +449,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586855493129</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;try new another function&quot;">
+      <created>1586869676352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586869676352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124801000" />
+    <option name="totallyTimeSpent" value="141561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,6 +473,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1543" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -477,8 +481,9 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25651303" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25651303" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.3297587" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.26675603" />
@@ -488,9 +493,9 @@
       <window_info anchor="bottom" id="Debug with VisualVM" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32841823" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.04021448" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.09383378" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.042895444" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.121983916" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.328877" />
@@ -548,7 +553,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;functions were reworked&quot;" />
     <MESSAGE value="&quot;neurons were reworked&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;neurons were reworked&quot;" />
+    <MESSAGE value="&quot;try new another function&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;try new another function&quot;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -605,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -720,49 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/layers/ActiveLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///opt/jdk1.8.0_201/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="707" column="12" selection-start-line="707" selection-start-column="12" selection-end-line="707" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/MnistParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="39" column="50" lean-forward="true" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/DigitData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/SigmoidFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/Function.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -773,7 +729,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/EmptyFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
             <element signature="e#185#186#0" expanded="true" />
@@ -787,31 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/layers/Layer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/ActiveNeuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
+        <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/InputNeuron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,19 +761,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/neurons/InputNeuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-509">
-          <caret line="92" column="92" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="92" />
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#133#134#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/layers/Layer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/entities/layers/ActiveLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/NetBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="165">
           <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -846,12 +799,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/functions/SigmoidFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="210">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-csv/1.8/commons-csv-1.8.jar!/org/apache/commons/csv/CSVParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#7382#7383#0" expanded="true" />
+            <element signature="e#7422#7423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_201/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="698" column="74" selection-start-line="694" selection-start-column="7" selection-end-line="698" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/well_data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="149">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/well_data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#3176#3177#0" expanded="true" />
+            <element signature="e#3210#3211#0" expanded="true" />
+            <element signature="e#3259#3260#0" expanded="true" />
+            <element signature="e#3291#3292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/gas_parser/WellData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/DigitData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/mnist_parser/MnistParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/network/Net.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="227" column="17" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/WellMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#523#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/khudyakov_udod/perceptron/MnistMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#517#548#0" expanded="true" />
           </folding>
         </state>
       </provider>

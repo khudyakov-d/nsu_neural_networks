@@ -120,11 +120,11 @@ public class Net {
 
     private void recalculateOutputLayerWeights(float[] outputData) {
         ActiveLayer layer = (ActiveLayer) outputLayer;
-        List<Neuron> outputHNeurons = layer.getNeurons();
+        List<Neuron> outputNeurons = layer.getNeurons();
         Function functionImpl = layer.getFunctionImpl();
 
-        for (int i = 0, neuronsSize = outputHNeurons.size(); i < neuronsSize; ++i) {
-            ActiveNeuron neuron = (ActiveNeuron) outputHNeurons.get(i);
+        for (int i = 0, neuronsSize = outputNeurons.size(); i < neuronsSize; ++i) {
+            ActiveNeuron neuron = (ActiveNeuron) outputNeurons.get(i);
             neuron.setDelta(calcDerivative(functionImpl, neuron) * (neuron.getActivatedOutput() - outputData[i]));
             correctWeights(neuron);
         }
@@ -214,7 +214,7 @@ public class Net {
         }
     }
 
-    public void testExample(List<Float> inputData, float[] outputData) {
+    public void predictExample(List<Float> inputData, float[] outputData) {
         if (inputData.size() != inputLayer.getNeurons().size()) {
             throw new IllegalStateException("Incorrect data dimension for input layer");
         } else if (outputData.length != outputLayer.getNeurons().size()) {
